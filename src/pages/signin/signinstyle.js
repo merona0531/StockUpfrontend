@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper=styled.div`
-    height: 96vh;
+    height: 100vh;
+  display: flex;
     flex-direction: column;
+  align-items: center;
     overflow: hidden;
     @media (max-width: 1000px) {
         height: 95vh;
@@ -11,13 +13,13 @@ export const Wrapper=styled.div`
 export const LogoWrapper = styled.div`
     width: auto;
     height: 60px;
-    padding-left: 10%;
-    padding-top: 5%;
+  margin-top: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `
 export const Logo = styled.img`
-    width: auto;
     height: 90%;
-    float: left;
     cursor: pointer;
 `
 export const LogInWrapper = styled.div`
@@ -25,12 +27,9 @@ export const LogInWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //align-items: end;
-    float: left;
+  align-items: center;
     width: 500px;
-    //height: 75%;
-    //background-color: #9bbebe;
-    //padding: 270px 30px;
+    
     @media (max-width: 1000px) {
         width: 97vw;
         display: flex;

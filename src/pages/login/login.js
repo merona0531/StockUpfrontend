@@ -4,8 +4,7 @@ import {
     LogInUnderWrapper, ImgWrapper, LogoWrapper, MiddleWrapper
 } from './loginstyle'
 import React from "react";
-import { Reset } from 'styled-reset';
-import Image from '../../images/forloginpage.png'
+import Image from '../../images/img_1.png'
 import LogoImage from '../../images/img.png'
 
 export default function LoginPage(){
