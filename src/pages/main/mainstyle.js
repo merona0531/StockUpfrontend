@@ -128,13 +128,46 @@ export const StocklistContainer=styled.div`
   width: 100%;
   height: 88%;
   align-items: center;
-  justify-content: center;
 `
 export const StockTopWrapper=styled.div`
-  
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
 `
 export const StockListTitle=styled.div`
     font-size: 40px;
   font-weight: bold;
-  background-color: yellow;
+`
+export const CSVbtn=styled.button`
+    margin-right: 20px;
+
+`
+export const Search=styled.button`
+
+`
+
+export const StockManageTopWrapper=styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+`
+export const StockManageListTitle=styled.div`
+    font-size: 25px;
+  font-weight: bold;
+`
+
+export const StockManageBottpmWrapper=styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+`
+export const Situation=styled.div`
+  display: flex;
+  width: 300px;
+  height: 450px;
+  background-color: gray;
+  justify-content: space-evenly;
+  margin-top: 20px;
 `

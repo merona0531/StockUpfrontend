@@ -21,7 +21,7 @@ import {
     LogoutBtn,
     StocklistContainer,
     StockListTitle,
-    StockTopWrapper
+    StockTopWrapper, CSVbtn, Search, StockManageTopWrapper, StockManageListTitle, StockManageBottpmWrapper, Situation
 } from './mainstyle';
 import LogoImg from '../../images/img.png'
 import { Reset } from 'styled-reset';
@@ -72,7 +72,10 @@ const MainPage = () => {
                             <StocklistContainer>
                                 <StockTopWrapper>
                                     <StockListTitle>재료 목록 관리</StockListTitle>
-
+                                    <div>
+                                        <CSVbtn>csv 파일 업로드</CSVbtn>
+                                        <Search>검색하기</Search>
+                                    </div>
                                 </StockTopWrapper>
                             </StocklistContainer>
                         </MainWrapper>
@@ -80,7 +83,42 @@ const MainPage = () => {
 
                 ) ;
             case "재고 관리":
-                return <h1>재고 관리 화면</h1>;
+                return(
+                    <>
+                        <Reset/>
+                        <MainWrapper>
+                            <TopBar>
+                                <Myname>사용자 님</Myname>
+                                <LogoutBtn>로그아웃</LogoutBtn>
+                                <AlarmBtn src={Alarm}></AlarmBtn>
+                            </TopBar>
+                            <StocklistContainer>
+                                <StockManageTopWrapper>
+                                    <StockManageListTitle>현재 재고 상황</StockManageListTitle>
+                                    <StockManageListTitle>예상 재고 상황</StockManageListTitle>
+                                </StockManageTopWrapper>
+                                <StockManageBottpmWrapper>
+                                    <Situation></Situation>
+                                    <Situation></Situation>
+                                </StockManageBottpmWrapper>
+                                <div>
+                                    <label>
+                                        <input type="checkbox" />
+                                        재고 부족 알림
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" />
+                                        신규 입고 알림
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" />
+                                        품절 알림
+                                    </label>
+                                </div>
+                            </StocklistContainer>
+                        </MainWrapper>
+                    </>
+                ) ;
             case "메뉴 등록":
                 return <h1>메뉴 등록 화면</h1>;
             case "주문":
