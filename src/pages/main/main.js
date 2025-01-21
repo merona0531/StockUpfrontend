@@ -22,20 +22,21 @@ import {
     StockManageListTitle,
     StockManageBottpmWrapper,
     Situation,
-    CMenu, MenuWrapper, Coffee, NonCoffee, Ctitle, SaveBtn, Table, TableRow, TableHeader, TableCell, Graph
+    CMenu, MenuWrapper, Coffee, NonCoffee, Ctitle, SaveBtn, Table, TableRow, TableHeader, TableCell, TableButton, Graph
 } from './mainstyle';
 import LogoImg from '../../images/img.png'
 import { Reset } from 'styled-reset';
 import Alarm from '../../images/alarm.png'
+
 const MainPage = () => {
     const [activeMenu, setActiveMenu] = useState("메인화면");
 
     const renderContent = () => {
         switch (activeMenu) {
             case "메인화면":
-                return(
+                return (
                     <>
-                        <Reset/>
+                        <Reset />
                         <MainWrapper>
                             <TopBar>
                                 <Myname>사용자 님</Myname>
@@ -58,15 +59,14 @@ const MainPage = () => {
                             </MainContainer>
                         </MainWrapper>
                     </>
-
-                ) ;
+                );
             case "재료 목록 관리":
-                return(
+                return (
                     <>
-                        <Reset/>
+                        <Reset />
                         <MainWrapper>
                             <TopBar>
-                                <Myname>사용자 님</Myname>
+                                <Myname>문경서 님</Myname>
                                 <LogoutBtn>로그아웃</LogoutBtn>
                                 <AlarmBtn src={Alarm}></AlarmBtn>
                             </TopBar>
@@ -81,12 +81,11 @@ const MainPage = () => {
                             </StocklistContainer>
                         </MainWrapper>
                     </>
-
-                ) ;
+                );
             case "재고 관리":
-                return(
+                return (
                     <>
-                        <Reset/>
+                        <Reset />
                         <MainWrapper>
                             <TopBar>
                                 <Myname>사용자 님</Myname>
@@ -119,11 +118,11 @@ const MainPage = () => {
                             </StocklistContainer>
                         </MainWrapper>
                     </>
-                ) ;
+                );
             case "메뉴 등록":
-                return(
+                return (
                     <>
-                        <Reset/>
+                        <Reset />
                         <MainWrapper>
                             <TopBar>
                                 <Myname>사용자 님</Myname>
@@ -137,31 +136,30 @@ const MainPage = () => {
                                 <MenuWrapper>
                                     <Coffee>
                                         <Ctitle>Coffee</Ctitle>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
-
                                     </Coffee>
                                     <NonCoffee>
                                         <Ctitle>Non-Coffee</Ctitle>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
-                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                        <div style={{ 'display': 'flex', width: '96%', justifyContent: 'space-between', marginTop: '10px' }}>
                                             <CMenu></CMenu>
                                             <CMenu></CMenu>
                                         </div>
@@ -171,7 +169,7 @@ const MainPage = () => {
                             </StocklistContainer>
                         </MainWrapper>
                     </>
-                ) ;
+                );
             case "주문":
                 return (
                     <>
@@ -184,7 +182,7 @@ const MainPage = () => {
                             </TopBar>
                             <StocklistContainer>
                                 <StockManageTopWrapper>
-                                    <StockManageListTitle>주문 내역</StockManageListTitle>
+                                    <StockManageListTitle>주문</StockManageListTitle>
                                 </StockManageTopWrapper>
                                 <Table>
                                     <thead>
@@ -193,6 +191,7 @@ const MainPage = () => {
                                         <TableHeader>수량</TableHeader>
                                         <TableHeader>가격</TableHeader>
                                         <TableHeader>배송 정보</TableHeader>
+                                        <TableHeader>주문하기</TableHeader>
                                     </TableRow>
                                     </thead>
                                     <tbody>
@@ -201,30 +200,56 @@ const MainPage = () => {
                                         <TableCell>10개</TableCell>
                                         <TableCell>20,000원</TableCell>
                                         <TableCell>익일 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell>커피 원두</TableCell>
                                         <TableCell>5kg</TableCell>
                                         <TableCell>50,000원</TableCell>
                                         <TableCell>3일 내 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>설탕</TableCell>
+                                        <TableCell>2kg</TableCell>
+                                        <TableCell>10,000원</TableCell>
+                                        <TableCell>2일 내 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell>시럽</TableCell>
                                         <TableCell>3병</TableCell>
                                         <TableCell>15,000원</TableCell>
                                         <TableCell>익일 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell>종이컵</TableCell>
-                                        <TableCell>200개</TableCell>
-                                        <TableCell>10,000원</TableCell>
+                                        <TableCell>초콜릿 소스</TableCell>
+                                        <TableCell>2병</TableCell>
+                                        <TableCell>12,000원</TableCell>
+                                        <TableCell>2일 내 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>티백</TableCell>
+                                        <TableCell>50개</TableCell>
+                                        <TableCell>25,000원</TableCell>
                                         <TableCell>익일 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell>냅킨</TableCell>
-                                        <TableCell>500개</TableCell>
-                                        <TableCell>8,000원</TableCell>
+                                        <TableCell>에스프레소 머신 필터</TableCell>
+                                        <TableCell>1개</TableCell>
+                                        <TableCell>30,000원</TableCell>
+                                        <TableCell>1주 내 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>빵</TableCell>
+                                        <TableCell>10개</TableCell>
+                                        <TableCell>15,000원</TableCell>
                                         <TableCell>3일 내 배송</TableCell>
+                                        <TableCell><TableButton>주문하기</TableButton></TableCell>
                                     </TableRow>
                                     </tbody>
                                 </Table>
@@ -233,9 +258,9 @@ const MainPage = () => {
                     </>
                 );
             case "보고서":
-                return(
+                return (
                     <>
-                        <Reset/>
+                        <Reset />
                         <MainWrapper>
                             <TopBar>
                                 <Myname>사용자 님</Myname>
@@ -251,7 +276,8 @@ const MainPage = () => {
                                 <SaveBtn>저장</SaveBtn>
                             </StocklistContainer>
                         </MainWrapper>
-                    </>);
+                    </>
+                );
             default:
                 return <h1>메인화면</h1>;
         }
@@ -259,7 +285,7 @@ const MainPage = () => {
 
     return (
         <>
-            <Reset/>
+            <Reset />
             <Wrapper>
                 <Container>
                     <Logo src={LogoImg} alt="Logo" onClick={() => setActiveMenu("메인화면")} />
@@ -284,7 +310,6 @@ const MainPage = () => {
                 <Content>{renderContent()}</Content>
             </Wrapper>
         </>
-
     );
 };
 

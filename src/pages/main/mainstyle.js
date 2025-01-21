@@ -106,19 +106,24 @@ export const Graphs=styled.div`
   height: 95%;
 `
 export const Myname=styled.div`
-  width: 150px;
   background-color: white;
-  margin-right: 15px;
+  margin-right: 30px;
+  font-size: 20px;
 
 `
 export const LogoutBtn=styled.button`
   width: 150px;
-  margin-right: 15px;
+  margin-right: 40px;
+  font-size: 20px;
+  height: 42px;
+  cursor: pointer;
+  border: none;
+
 
 `
 export const AlarmBtn=styled.img`
   width: 32px;
-  margin-right: 15px;
+  margin-right: 25px;
   height: auto;
 `
 
@@ -140,9 +145,19 @@ export const StockListTitle=styled.div`
 `
 export const CSVbtn=styled.button`
     margin-right: 20px;
+  background-color: #DABA8F;
+  width: 150px;
+  height: 42px;
+  cursor: pointer;
+  border: none;
 
 `
 export const Search=styled.button`
+  width: 150px;
+  height: 42px;
+  background-color: #DABA8F;
+  cursor: pointer;
+  border: none;
 
 `
 
@@ -223,7 +238,7 @@ export const TableRow = styled.tr`
 `;
 
 export const TableHeader = styled.th`
-    background-color: #4CAF50;
+    background-color: #562E00;
     color: white;
     text-align: left;
     padding: 12px;
@@ -236,5 +251,33 @@ export const TableCell = styled.td`
 
     &:last-child {
         text-align: center;
+    }
+`;
+
+export const TableButton = styled.button`
+    background-color: #562E00; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #562E00;
+    }
+
+    &:active {
+        background-color: #562E00;
+    }
+
+    &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
     }
 `;
