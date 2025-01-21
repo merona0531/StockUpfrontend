@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import {
-    Wrapper,
-    SidebarItem,
-    Sidebar,
+    Wrapper, SidebarItem, Sidebar,
     Content,
-    Logo,
-    Container,
-    MainWrapper,
-    MainContainer,
-    MainTop,
+    Logo, Container, MainWrapper, MainContainer, MainTop,
     Weather,
     PostBtn,
     MainBottom,
@@ -21,7 +15,14 @@ import {
     LogoutBtn,
     StocklistContainer,
     StockListTitle,
-    StockTopWrapper, CSVbtn, Search, StockManageTopWrapper, StockManageListTitle, StockManageBottpmWrapper, Situation
+    StockTopWrapper,
+    CSVbtn,
+    Search,
+    StockManageTopWrapper,
+    StockManageListTitle,
+    StockManageBottpmWrapper,
+    Situation,
+    CMenu, MenuWrapper, Coffee, NonCoffee, Ctitle, SaveBtn, Table, TableRow, TableHeader, TableCell, Graph
 } from './mainstyle';
 import LogoImg from '../../images/img.png'
 import { Reset } from 'styled-reset';
@@ -120,11 +121,137 @@ const MainPage = () => {
                     </>
                 ) ;
             case "메뉴 등록":
-                return <h1>메뉴 등록 화면</h1>;
+                return(
+                    <>
+                        <Reset/>
+                        <MainWrapper>
+                            <TopBar>
+                                <Myname>사용자 님</Myname>
+                                <LogoutBtn>로그아웃</LogoutBtn>
+                                <AlarmBtn src={Alarm}></AlarmBtn>
+                            </TopBar>
+                            <StocklistContainer>
+                                <StockManageTopWrapper>
+                                    <StockManageListTitle>메뉴 등록</StockManageListTitle>
+                                </StockManageTopWrapper>
+                                <MenuWrapper>
+                                    <Coffee>
+                                        <Ctitle>Coffee</Ctitle>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+
+                                    </Coffee>
+                                    <NonCoffee>
+                                        <Ctitle>Non-Coffee</Ctitle>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+                                        <div style={{'display':'flex', width:'96%', justifyContent:'space-between', marginTop:'10px'}}>
+                                            <CMenu></CMenu>
+                                            <CMenu></CMenu>
+                                        </div>
+                                    </NonCoffee>
+                                </MenuWrapper>
+                                <SaveBtn>저장</SaveBtn>
+                            </StocklistContainer>
+                        </MainWrapper>
+                    </>
+                ) ;
             case "주문":
-                return <h1>주문 화면</h1>;
+                return (
+                    <>
+                        <Reset />
+                        <MainWrapper>
+                            <TopBar>
+                                <Myname>사용자 님</Myname>
+                                <LogoutBtn>로그아웃</LogoutBtn>
+                                <AlarmBtn src={Alarm}></AlarmBtn>
+                            </TopBar>
+                            <StocklistContainer>
+                                <StockManageTopWrapper>
+                                    <StockManageListTitle>주문 내역</StockManageListTitle>
+                                </StockManageTopWrapper>
+                                <Table>
+                                    <thead>
+                                    <TableRow>
+                                        <TableHeader>상품명</TableHeader>
+                                        <TableHeader>수량</TableHeader>
+                                        <TableHeader>가격</TableHeader>
+                                        <TableHeader>배송 정보</TableHeader>
+                                    </TableRow>
+                                    </thead>
+                                    <tbody>
+                                    <TableRow>
+                                        <TableCell>우유</TableCell>
+                                        <TableCell>10개</TableCell>
+                                        <TableCell>20,000원</TableCell>
+                                        <TableCell>익일 배송</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>커피 원두</TableCell>
+                                        <TableCell>5kg</TableCell>
+                                        <TableCell>50,000원</TableCell>
+                                        <TableCell>3일 내 배송</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>시럽</TableCell>
+                                        <TableCell>3병</TableCell>
+                                        <TableCell>15,000원</TableCell>
+                                        <TableCell>익일 배송</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>종이컵</TableCell>
+                                        <TableCell>200개</TableCell>
+                                        <TableCell>10,000원</TableCell>
+                                        <TableCell>익일 배송</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>냅킨</TableCell>
+                                        <TableCell>500개</TableCell>
+                                        <TableCell>8,000원</TableCell>
+                                        <TableCell>3일 내 배송</TableCell>
+                                    </TableRow>
+                                    </tbody>
+                                </Table>
+                            </StocklistContainer>
+                        </MainWrapper>
+                    </>
+                );
             case "보고서":
-                return <h1>보고서 화면</h1>;
+                return(
+                    <>
+                        <Reset/>
+                        <MainWrapper>
+                            <TopBar>
+                                <Myname>사용자 님</Myname>
+                                <LogoutBtn>로그아웃</LogoutBtn>
+                                <AlarmBtn src={Alarm}></AlarmBtn>
+                            </TopBar>
+                            <StocklistContainer>
+                                <StockManageTopWrapper>
+                                    <StockManageListTitle>보고서</StockManageListTitle>
+                                </StockManageTopWrapper>
+                                <Graph></Graph>
+                                <Graph></Graph>
+                                <SaveBtn>저장</SaveBtn>
+                            </StocklistContainer>
+                        </MainWrapper>
+                    </>);
             default:
                 return <h1>메인화면</h1>;
         }

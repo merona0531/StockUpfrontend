@@ -171,3 +171,70 @@ export const Situation=styled.div`
   justify-content: space-evenly;
   margin-top: 20px;
 `
+export const MenuWrapper=styled.div`
+  width: 80%;
+  height: 550px;
+  display: flex;
+`
+export const Coffee=styled.div`
+    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+`
+export const NonCoffee=styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const Ctitle=styled.div`
+    font-size: 25px;
+  width: 96%;
+  background-color: #d9d9d9;
+  text-align: center;
+`
+export const CMenu=styled.div`
+  width: 240px;
+  height: 150px;
+  background-color: #d9d9d9;
+`
+export const SaveBtn = styled.button`
+  
+`
+export const Graph = styled.div`
+  width: 600px;
+  height: 200px;
+  background-color: #d9d9d9;
+  margin-bottom: 15px;
+`
+export const Table = styled.table`
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+`;
+
+export const TableRow = styled.tr`
+    &:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+`;
+
+export const TableHeader = styled.th`
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px;
+`;
+
+export const TableCell = styled.td`
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+
+    &:last-child {
+        text-align: center;
+    }
+`;
