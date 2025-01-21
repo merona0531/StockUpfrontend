@@ -10,9 +10,11 @@ export const Sidebar = styled.div`
   width: 250px;
   height: 88%;
   background-color: #562E00;
+  border-radius: 0 45px 0 0;
   color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
@@ -22,14 +24,18 @@ export const Logo = styled.img`
 `;
 
 export const SidebarItem = styled.div`
-  padding: 10px 15px;
+  width: 150px;
+  padding: 30px 20px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 20px ;
+  text-align: center;
+  margin-top: 20px;
   cursor: pointer;
-  background-color: ${(props) => (props.active ? "#ffffff" : "transparent")};
+  font-weight: bold;
+  background-color: ${(props) => (props.active ? "#DABA8F" : "transparent")};
   color: ${(props) => (props.active ? "#000000" : "white")};
   &:hover {
-    background-color: #ffffff;
+    background-color: #DABA8F;
     color: black;
   }
 `;
@@ -78,32 +84,41 @@ export const MainTop=styled.div`
   display: flex;
   justify-content: space-evenly;
 `
-export const Weather=styled.div`
+export const Weather=styled.img`
   width: 70%;
-  background-color: #61dafb;
   height: 95%;
+  object-fit: cover;
+  border-radius: 50px;
 `
-export const PostBtn=styled.div`
+export const PostBtn=styled.img`
   width: 25%;
-  background-color: blue;
   height: 95%;
+  border-radius: 15px;
 `
 export const MainBottom=styled.div`
   width: 100%;
   height: 60%;
   align-items: center;
   display: flex;
-  justify-content: space-evenly;`
+  justify-content: center;`
 export const Stocks=styled.div`
-  width: 25%;
-  background-color: blue;
+  width: 30%;
   height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
-export const Stock=styled.div``
-export const Graphs=styled.div`
+export const Stock=styled.img`
   width: 70%;
-  background-color: #61dafb;
+  height: 30%;
+  margin:5px 0 5px 0;
+  border-radius: 15px;
+  object-fit: cover;
+`
+export const Graphs=styled.img`
+  width: 70%;
   height: 95%;
+  object-fit: cover;
 `
 export const Myname=styled.div`
   background-color: white;
@@ -143,15 +158,18 @@ export const StockListTitle=styled.div`
     font-size: 40px;
   font-weight: bold;
 `
-export const CSVbtn=styled.button`
-    margin-right: 20px;
+export const CSVbtn = styled.label`
+  margin-right: 20px;
   background-color: #DABA8F;
   width: 150px;
   height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: none;
-
-`
+  font-size: 16px;
+`;
 export const Search=styled.button`
   width: 150px;
   height: 42px;
@@ -164,7 +182,7 @@ export const Search=styled.button`
 export const StockManageTopWrapper=styled.div`
   display: flex;
   width: 80%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 20px;
 `
 export const StockManageListTitle=styled.div`
@@ -177,12 +195,12 @@ export const StockManageBottpmWrapper=styled.div`
   width: 80%;
   justify-content: space-evenly;
   margin-top: 20px;
+  align-items: center;
 `
-export const Situation=styled.div`
+export const Situation=styled.img`
   display: flex;
   width: 300px;
   height: 450px;
-  background-color: gray;
   justify-content: space-evenly;
   margin-top: 20px;
 `
@@ -190,6 +208,7 @@ export const MenuWrapper=styled.div`
   width: 80%;
   height: 550px;
   display: flex;
+  margin-top: 20px;
 `
 export const Coffee=styled.div`
     width: 50%;
@@ -208,25 +227,45 @@ export const NonCoffee=styled.div`
 export const Ctitle=styled.div`
     font-size: 25px;
   width: 96%;
-  background-color: #d9d9d9;
+  background-color: #FFECC2;
   text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 export const CMenu=styled.div`
   width: 240px;
-  height: 150px;
-  background-color: #d9d9d9;
+  height: 140px;
+  background-color: #FFECC2;
 `
 export const SaveBtn = styled.button`
+    width: 120px;
+  height: 40px;
+  background-color: #562E00;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
   
 `
 export const Graph = styled.div`
-  width: 600px;
-  height: 200px;
-  background-color: #d9d9d9;
+  width: 860px;
+  height: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`
+export const Graph2 = styled.img`
+  width: 800px;
+  height: 600px;
   margin-bottom: 15px;
+  object-fit: cover;
 `
 export const Table = styled.table`
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin-top: 20px;
 `;

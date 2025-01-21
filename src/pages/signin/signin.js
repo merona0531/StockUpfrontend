@@ -35,6 +35,7 @@ export default function SigninPage() {
         }
         // 회원가입 처리 로직 추가
         alert("회원가입 성공!");
+        navigate('/login');
     };
 
     return (
